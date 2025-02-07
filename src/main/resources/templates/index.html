@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>业务数据查询示例</title>
+    <!-- 引入外部 CSS 文件 -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- Banner -->
+<div class="banner">
+    <div class="banner-title">业务数据查询</div>
+    <div class="date-box">2025-01</div>
+</div>
+
+<!-- 主体内容 -->
+<div class="content">
+    <h2>省市区多级查询</h2>
+
+    <!-- 搜索面板 -->
+    <div class="search-panel">
+        <div class="form-group">
+            <label for="keyword">指标：</label>
+            <input type="text" id="keyword" placeholder="请输入查询指标" />
+        </div>
+
+        <!-- 省份 -->
+        <div class="form-group">
+            <label for="province">省份：</label>
+            <select id="province" class="select-gold">
+                <option value="">请选择</option>
+                <option value="全部">全部</option>
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="天津">天津</option>
+                <option value="重庆">重庆</option>
+                <option value="浙江">浙江</option>
+                <option value="江苏">江苏</option>
+                <option value="广东">广东</option>
+            </select>
+        </div>
+
+        <!-- 市 -->
+        <div class="form-group" id="city-container">
+            <label for="city">市：</label>
+            <select id="city" class="select-gold">
+                <option value="">请选择市</option>
+                <option value="全部">全部</option>
+                <option value="杭州">杭州</option>
+                <option value="宁波">宁波</option>
+                <option value="温州">温州</option>
+                <option value="台州">台州</option>
+                <option value="金华">金华</option>
+                <option value="嘉兴">嘉兴</option>
+                <option value="绍兴">绍兴</option>
+                <option value="湖州">湖州</option>
+                <option value="丽水">丽水</option>
+                <option value="衢州">衢州</option>
+                <option value="舟山">舟山</option>
+            </select>
+        </div>
+
+        <!-- 区/县 -->
+        <div class="form-group" id="district-container">
+            <label for="district">区/县：</label>
+            <select id="district" class="select-gold">
+                <option value="">请选择区/县</option>
+            </select>
+        </div>
+
+        <button id="search-btn">查询</button>
+    </div>
+
+    <!-- 查询结果 -->
+    <div id="result-panel"></div>
+</div>
+
+<!-- 引入外部 JS 文件 -->
+<script src="/main.js"></script>
+
+</body>
+</html>
