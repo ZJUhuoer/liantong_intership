@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/province")
@@ -39,4 +40,25 @@ public class ProvinceController {
     public ProvinceEntity getProvinceById(@PathVariable int id) {
         return provinceService.getProvinceById(id);
     }
+
+    @GetMapping("/distinct")
+    public List<Map<String, String>> getDistinctProvinceIndicator() {
+        return provinceService.getDistinctProvinceIndicator();
+    }
+
+    @GetMapping("/distinctProvinces")
+    public List<String> getDistinctProvinces() {
+        return provinceService.getDistinctProvinces();
+    }
+
+    @GetMapping("/distinctIndicators")
+    public List<String> getDistinctIndicators() {
+        return provinceService.getDistinctIndicators();
+    }
+
+    @GetMapping("/data")
+    public List<ProvinceEntity> getFilteredData(@RequestParam String province, @RequestParam String indicator) {
+        return provinceService.getFilteredData(province, indicator);
+    }
+
 }
