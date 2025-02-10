@@ -1,4 +1,4 @@
-/* »ù´¡ÖØÖÃ */
+/* åŸºç¡€é‡ç½® */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-/* BannerÇøÓò */
+/* BanneråŒºåŸŸ */
 .banner {
     width: 100%;
     min-height: 120px;
@@ -39,7 +39,7 @@ body {
     border-radius: 4px;
 }
 
-/* ÄÚÈÝÈÝÆ÷ */
+/* å†…å®¹å®¹å™¨ */
 .content {
     width: 1200px;
     max-width: 95%;
@@ -57,7 +57,7 @@ body {
         padding-left: 10px;
     }
 
-/* ¼ìË÷ÇøÓò */
+/* æ£€ç´¢åŒºåŸŸ */
 .search-panel {
     display: flex;
     flex-wrap: wrap;
@@ -106,13 +106,13 @@ select {
         background-color: #ff0000;
     }
 
-/* Òþ²ØÔªËØ */
+/* éšè—å…ƒç´  */
 .hidden {
     display: none;
 }
 
-/* ËÑË÷¿ò */
-#keyword {
+/* æœç´¢æ¡† */
+#indicator {
     width: 200px;
     height: 32px;
     padding: 0 8px;
@@ -130,7 +130,7 @@ textarea:-webkit-autofill:focus {
 }
 
 /**********************************************
- * ±í¸ñÑùÊ½£ºÉîºìÅäÉ« + ½ô´Õ²¼¾Ö + Ð¡×ÖºÅ
+ * è¡¨æ ¼æ ·å¼ï¼šæ·±çº¢é…è‰² + ç´§å‡‘å¸ƒå±€ + å°å­—å·
  **********************************************/
 .table-container {
     width: 100%;
@@ -179,17 +179,17 @@ tbody tr:hover {
     background-color: #ffe6e6;
 }
 
-/* µã»÷ÌõÄ¿ÁÐ±íÑùÊ½£¨Ê¾Àý£© */
+/* ç‚¹å‡»æ¡ç›®åˆ—è¡¨æ ·å¼ï¼ˆç¤ºä¾‹ï¼‰ */
 .clickable-blocks {
     display: flex;
-    flex-wrap: wrap; /* Èç¹ûÆÁÄ»½ÏÕ­£¬×Ô¶¯»»ÐÐ */
-    gap: 20px; /* ¿éÖ®¼äµÄ¼ä¾à */
-    justify-content: center; /* Ë®Æ½¾ÓÖÐ */
-    margin-top: 20px; /* ÓëÆäËûÔªËØÁô¼äÏ¶ */
+    flex-wrap: wrap; /* å¦‚æžœå±å¹•è¾ƒçª„ï¼Œè‡ªåŠ¨æ¢è¡Œ */
+    gap: 20px; /* å—ä¹‹é—´çš„é—´è· */
+    justify-content: center; /* æ°´å¹³å±…ä¸­ */
+    margin-top: 20px; /* ä¸Žå…¶ä»–å…ƒç´ ç•™é—´éš™ */
 }
 
     .clickable-blocks > .block {
-        flex: 0 0 200px; /* Ã¿¸ö¿éµÄ×îÐ¡¿í¶È£¬¿É¸ù¾ÝÐèÒªµ÷Õû */
+        flex: 0 0 200px; /* æ¯ä¸ªå—çš„æœ€å°å®½åº¦ï¼Œå¯æ ¹æ®éœ€è¦è°ƒæ•´ */
         border: 1px solid #ddd;
         border-radius: 8px;
         background-color: #fefefe;
@@ -199,7 +199,7 @@ tbody tr:hover {
         transition: transform 0.3s, box-shadow 0.3s;
     }
 
-        /* Êó±êÐü¸¡Ê±·Å´óÒ»µã */
+        /* é¼ æ ‡æ‚¬æµ®æ—¶æ”¾å¤§ä¸€ç‚¹ */
         .clickable-blocks > .block:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
