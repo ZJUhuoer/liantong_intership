@@ -2,8 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>业务数据查询</title>
-    <link rel="stylesheet" href="style.css">
+    <title>业务数据查询示例</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -14,86 +14,31 @@
 
 <!-- 主体内容 -->
 <div class="content">
-    <h2>指标&省市区查询</h2>
+    <h2>省市县 & 指标 查询</h2>
 
     <!-- 选择框 -->
     <div class="search-panel">
-        <!-- 指标 -->
+        <div class="form-group">
+            <label for="table">选择表格：</label>
+            <select id="table">
+                <option value="">请选择</option>
+                <option value="province">省份</option>
+                <option value="city">城市</option>
+                <option value="county">县区</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location">选择地区：</label>
+            <select id="location">
+                <option value="">请选择</option>
+            </select>
+        </div>
+
         <div class="form-group">
             <label for="indicator">指标：</label>
-            <input type="text" id="indicator" placeholder="请输入查询指标" />
-        </div>
-        <!-- 省 -->
-        <div class="form-group">
-            <label for="province">省份：</label>
-            <select id="province" class="select-gold" multiple size="3">
-                <option value="">无</option>
-                <option value="全部">全部</option>
-                <option value="全国">全国</option>
-                <option value="北10">北10</option>
-                <option value="南21">南21</option>
-                <option value="北京">北京</option>
-                <option value="天津">天津</option>
-                <option value="河北">河北</option>
-                <option value="山西">山西</option>
-                <option value="内蒙古">内蒙古</option>
-                <option value="辽宁">辽宁</option>
-                <option value="吉林">吉林</option>
-                <option value="黑龙江">黑龙江</option>
-                <option value="上海">上海</option>
-                <option value="江苏">江苏</option>
-                <option value="浙江">浙江</option>
-                <option value="安徽">安徽</option>
-                <option value="福建">福建</option>
-                <option value="江西">江西</option>
-                <option value="山东">山东</option>
-                <option value="河南">河南</option>
-                <option value="湖北">湖北</option>
-                <option value="湖南">湖南</option>
-                <option value="广东">广东</option>
-                <option value="广西">广西</option>
-                <option value="海南">海南</option>
-                <option value="重庆">重庆</option>
-                <option value="四川">四川</option>
-                <option value="贵州">贵州</option>
-                <option value="云南">云南</option>
-                <option value="西藏">西藏</option>
-                <option value="陕西">陕西</option>
-                <option value="甘肃">甘肃</option>
-                <option value="青海">青海</option>
-                <option value="宁夏">宁夏</option>
-                <option value="新疆">新疆</option>
-            </select>
-        </div>
-        <!-- 市 -->
-        <div class="form-group">
-            <label for="city">市：</label>
-            <select id="city" class="select-gold" multiple size="3">
-                <option value="">无</option>
-                <option value="全部">全部</option>
-                <option value="杭州">杭州</option>
-                <option value="宁波">宁波</option>
-                <option value="温州">温州</option>
-                <option value="台州">台州</option>
-                <option value="金华">金华</option>
-                <option value="嘉兴">嘉兴</option>
-                <option value="绍兴">绍兴</option>
-                <option value="湖州">湖州</option>
-                <option value="丽水">丽水</option>
-                <option value="衢州">衢州</option>
-                <option value="舟山">舟山</option>
-                <option value="省本级">省本级</option>
-                <option value="全省">全省</option>
-                <option value="系统集成">系统集成</option>
-                <option value="公众">公众</option>
-                <option value="政企">政企</option>
-            </select>
-        </div>
-        <!-- 区 -->
-        <div class="form-group">
-            <label for="county">区/县：</label>
-            <select id="county" class="select-gold" multiple size="3">
-                <option value="">无</option>
+            <select id="indicator">
+                <option value="">请选择</option>
             </select>
         </div>
 
@@ -103,19 +48,22 @@
     <!-- 结果展示 -->
     <div id="result-panel">
         <table>
+            <thead>
+            <tr>
+                <th>地区</th>
+                <th>指标</th>
+                <th>日期</th>
+                <th>数值</th>
+            </tr>
+            </thead>
             <tbody id="data-table">
-                <!-- JavaScript 动态填充 -->
+            <!-- JavaScript 动态填充 -->
             </tbody>
         </table>
     </div>
 </div>
 
-<!-- 图表容器 -->
-<div id="chart-tooltip">
-    <canvas id="line-chart"></canvas>
-</div>
+<script src="/main.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="main.js"></script>
 </body>
 </html>

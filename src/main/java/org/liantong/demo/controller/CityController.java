@@ -19,6 +19,19 @@ public class CityController {
         return cityService.list();
     }
 
+    @GetMapping("/distinctCities")
+    public List<String> getDistinctCities() {
+        return cityService.getDistinctCities();
+    }
+
+    @GetMapping("/data")
+    public List<CityEntity> getFilteredData(
+        @RequestParam String city, 
+        @RequestParam String indicator
+    ) {
+        return cityService.getFilteredData(city, indicator);
+    }
+
     @PostMapping("/add")
     public boolean add(@RequestBody CityEntity entity) {
         return cityService.save(entity);
@@ -33,4 +46,15 @@ public class CityController {
     public boolean delete(@PathVariable Integer id) {
         return cityService.removeById(id);
     }
+
+    @GetMapping("/distinctCitys")
+    public List<String> getDistinctCitys() {
+        return cityService.getDistinctCitys();
+    }
+
+    @GetMapping("/distinctIndicators")
+    public List<String> getDistinctIndicators() {
+        return cityService.getDistinctIndicators();
+    }
+
 }

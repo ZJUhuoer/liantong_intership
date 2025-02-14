@@ -8,6 +8,6 @@ public class MainController {
 
     @GetMapping("/")
     public String index() {
-        return "index";  // è¿™æ ·Spring Bootä¼šæ‰¾åˆ°templates/index.htmlå¹¶è¿”å›ç»™æµè§ˆå™¨
+        return "index";  // ÕâÑùSpring Boot»áÕÒµ½templates/index.html²¢·µ»Ø¸øä¯ÀÀÆ÷
     }
 }

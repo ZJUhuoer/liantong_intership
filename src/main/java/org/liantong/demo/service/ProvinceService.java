@@ -20,11 +20,11 @@ public class ProvinceService extends ServiceImpl<ProvinceMapper, ProvinceEntity>
 
     public List<ProvinceEntity> getProvincePage(int pageNum, int pageSize) {
         Page<ProvinceEntity> page = new Page<>(pageNum, pageSize);
-        return baseMapper.selectPage(page, null).getRecords(); // ä¸ä¼ æ¡ä»¶è¿”å›æ‰€æœ‰æ•°æ®
+        return baseMapper.selectPage(page, null).getRecords(); // ²»´«Ìõ¼ş·µ»ØËùÓĞÊı¾İ
     }
 
     public ProvinceEntity getProvinceById(int id) {
-        // ä½¿ç”¨ MyBatis-Plus æä¾›çš„æŸ¥è¯¢æ–¹æ³•ï¼Œæ ¹æ® ID æŸ¥è¯¢å•æ¡è®°å½•
+        // Ê¹ÓÃ MyBatis-Plus Ìá¹©µÄ²éÑ¯·½·¨£¬¸ù¾İ ID ²éÑ¯µ¥Ìõ¼ÇÂ¼
         return baseMapper.selectById(id);
     }
 

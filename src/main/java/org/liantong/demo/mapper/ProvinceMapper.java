@@ -23,4 +23,3 @@ public interface ProvinceMapper extends BaseMapper<ProvinceEntity> {
     @Select("SELECT province, indicator, date, value FROM province WHERE province = #{province} AND indicator = #{indicator}")
     List<ProvinceEntity> getFilteredData(@Param("province") String province, @Param("indicator") String indicator);
 }
-

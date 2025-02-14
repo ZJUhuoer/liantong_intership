@@ -35,7 +35,7 @@ public class ProvinceController {
         return provinceService.removeById(id);
     }
 
-    // 鏍规嵁 ID 鑾峰彇鍗曟潯璁板綍
+    // 根据 ID 获取单条记录
     @GetMapping("/{id}")
     public ProvinceEntity getProvinceById(@PathVariable int id) {
         return provinceService.getProvinceById(id);
